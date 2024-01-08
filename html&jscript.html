@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PÁGINA HTML</title>
+</head>
+<body>
+    <h1>Testando JScript dentro de HTML</h1> <!-- H1 = Paragrafo -->
+    
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Clique para exibir a data e a hora de hoje.</button> 
+    <!-- Explicando o código: Button = cria um botão. OnClick = quando clicado, executa algo, no caso,encontra o elemento HTML com o ID 'demo' e substitui o seu conteúdo pelo valor retornado pela função Date(), que é a data e a hora atuais no formato de uma string.  -->
+
+    <p id="demo"></p> <!-- Esse elemento se transforme no texto de data e hora-->
+
+    <h1 id="demo2"></h1>
+
+    <script>
+        document.getElementById("demo2").innerHTML = "Hello JavaScript";
+    </script>
+</body>
+</html>
