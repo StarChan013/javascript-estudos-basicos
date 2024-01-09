@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS & jscript</title>
+</head>
+<body>
+    <p id="text">Esse texto pode ser maior ou menor se você clicar no botão abaixo</p>
+    
+    <button onclick="document.getElementById('text').style.fontSize = '40px'">Clique aqui para aumentar!</button> <!-- O Style se refere a estilizar o html. Então o jscript pega o elemento pelo id dele e muda a fonte para 40 de tamanho-->
+
+    <button onclick="document.getElementById('text').style.fontSize = '10px'">Clique aqui para diminuir</button>
+
+    <p id="text2" style="display: none">Hello JavaScript</p>
+
+    <button onclick="document.getElementById('text2').style.display='block'">Clique aqui para mostrar o texto</button>
+
+    <button onclick="document.getElementById('text2').style.display='none'">Clique aqui para sumir o texto</button> 
+
+    <!-- Block = Mostra o texto. None = Some com texto-->
+</body>
+</html>
