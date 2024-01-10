@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PÁGINA HTML</title>
 </head>
+
 <body>
     <h1>Testando JScript dentro de HTML</h1> <!-- H1 = Paragrafo -->
-    
-    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Clique para exibir a data e a hora de hoje.</button> 
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Clique para exibir a data e a
+        hora de hoje.</button>
     <!-- Explicando o código: Button = cria um botão. OnClick = quando clicado, executa algo, no caso,encontra o elemento HTML com o ID 'demo' e substitui o seu conteúdo pelo valor retornado pela função Date(), que é a data e a hora atuais no formato de uma string.  -->
 
     <p id="demo"></p> <!-- Esse elemento se transforme no texto de data e hora-->
@@ -21,8 +24,10 @@
 
     <h2>Alerta</h2>
 
-    <button onclick="window.alert('Você é burro? É 2, idiota!')">Clique aqui para saber quanto é 1 + 1</button> <!-- window.alert(Sua mensagem) = cria um pop up que exibe sua mensagem. Pode-se usar apenas alert(mensagem)-->
+    <button onclick="window.alert('Você é burro? É 2, idiota!')">Clique aqui para saber quanto é 1 + 1</button>
+    <!-- window.alert(Sua mensagem) = cria um pop up que exibe sua mensagem. Pode-se usar apenas alert(mensagem)-->
 
     <button onclick="print()">Imprima essa página</button>
 </body>
+
 </html>
