@@ -72,3 +72,23 @@ for (let elemento of notas) { //para cada elemento da lista, faça algo
 }
 
 console.log("A média das notas é" , somaDasNotas2 / notas.length);
+
+let novasNotas = [4.5, 7.5, 4, 6.5]
+
+let soma = 0;
+
+let elemento;
+for (elemento of novasNotas) {
+  soma += elemento;
+}
+
+let mediaNova = soma / novasNotas.length;
+
+if (mediaNova > 7) {
+  console.log(`Parabéns! Você foi aprovado. Sua média é ${mediaNova}`);
+} else {
+  console.log(`Que pena! Você reprovou. Sua média foi ${mediaNova}`);
+}
+
+
+
