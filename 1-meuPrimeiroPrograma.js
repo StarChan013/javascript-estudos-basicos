@@ -16,7 +16,6 @@ console.log(numRandom);
 
 //O programa interpreta sempre de baixo para cima da esquerda para direita :)
 
-
 //Operações matemáticas
 const number = 10;
 adicao = number + number;

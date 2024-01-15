@@ -67,13 +67,14 @@ console.log(`A média das notas é ${media}`);
 
 let somaDasNotas2 = 0;
 
-for (let elemento of notas) { //para cada elemento da lista, faça algo
-    somaDasNotas2 += elemento;
+for (let elemento of notas) {
+  //para cada elemento da lista, faça algo
+  somaDasNotas2 += elemento;
 }
 
-console.log("A média das notas é" , somaDasNotas2 / notas.length);
+console.log("A média das notas é", somaDasNotas2 / notas.length);
 
-let novasNotas = [4.5, 7.5, 4, 6.5]
+let novasNotas = [4.5, 7.5, 4, 6.5];
 
 let soma = 0;
 
@@ -90,5 +91,33 @@ if (mediaNova > 7) {
   console.log(`Que pena! Você reprovou. Sua média foi ${mediaNova}`);
 }
 
+//FOREACH() //PODE MODIFICAR A ARRAY ORIGINAL
 
+const newNotas = [10, 7.5, 8, 9.5];
 
+somaNewNotas = 0;
+
+newNotas.forEach(function (nota) {
+  somaNewNotas += nota;
+});
+
+const newMedia = somaNewNotas / newNotas.length;
+
+console.log(`A média das notas é ${newMedia}`);
+
+//MAP(); //CRIA UMA ARRAY NOVA POIS NÃO PODE MODIFICAR A ORIGINAL
+
+const pontoExtraNotas = [10, 9.5, 8, 7, 6];
+
+const notasAtualizadas = pontoExtraNotas.map((nota) => {
+  // Bom para reescrever arrays
+  return nota + 1 >= 10 ? 10 : nota + 1;
+});
+
+console.log(notasAtualizadas);
+
+const nomes = ["ana Julia", "Caio vinicius", "BIA Silva"];
+
+const nomesPadronizados = nomes.map((nome) => nome.toUpperCase());
+
+console.log(nomesPadronizados);

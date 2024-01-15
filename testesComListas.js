@@ -92,9 +92,10 @@ console.log(
 //INCLUDES()
 
 function exibeNomeENota(aluno) {
-  if (listaDeAlunosEMedias[0].includes(aluno)) { //VERIFICA SE O OBJETO ESTÁ INCLUSO NA LISTA OU NÃO
+  if (listaDeAlunosEMedias[0].includes(aluno)) {
+    //VERIFICA SE O OBJETO ESTÁ INCLUSO NA LISTA OU NÃO
     console.log(`${aluno} está matriculado`);
-    const [alunos,medias] = listaDeAlunosEMedias;
+    const [alunos, medias] = listaDeAlunosEMedias;
     //equivale a:
     // const alunos4 = listaDeAlunosEMedias[0];
     // const medias2 = listaDeAlunosEMedias[1];

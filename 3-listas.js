@@ -1,10 +1,6 @@
 console.log("Listas");
 
-const listaDestinos = new Array(
-    `Salvador`,
-    `São Paulo`,
-    `Rio de Janeiro`
-);
+const listaDestinos = new Array(`Salvador`, `São Paulo`, `Rio de Janeiro`);
 
 console.log(listaDestinos);
 
@@ -23,12 +19,7 @@ let carroAntigo = carros[0]; //Acessar um elemento de uma lista através de seu 
 
 console.log(carroAntigo);
 
-const frutas = new Array(
-    "Banana",
-    "Laranja",
-    "Maçã",
-    "Manga"
-)
+const frutas = new Array("Banana", "Laranja", "Maçã", "Manga");
 
 let outroJeitoFrutas = frutas.toString(); //Transformar listas em Strings
 
@@ -41,19 +32,14 @@ const pessoaLista = ["Vanessa", "Forin", 26];
 
 const pessoaObjeto = { primeiroNome: "Vanessa", sobrenome: "Forin", idade: 26 }; //Objeto usa chaves
 
-let idade = pessoaObjeto.idade
+let idade = pessoaObjeto.idade;
 let nome = pessoaLista[0];
 
 console.log(`Meu nome é ${nome} e eu tenho ${idade} anos`); //Para interpolação de variáveis, deve-se usar crases
 
 //PROPRIEDADES E MÉTODOS DE UMA LISTA
 
-const pokemonTeam = new Array(
-    "Milotic",
-    "Minior",
-    "Slowbro",
-    "Gastrodon",
-)
+const pokemonTeam = new Array("Milotic", "Minior", "Slowbro", "Gastrodon");
 
 console.log(pokemonTeam.length); //Número de elementos de uma lista
 console.log(pokemonTeam[2]); //Acessando um dos elementos da lista usando seu index numérico
@@ -71,7 +57,7 @@ pokemonTeam[0] = "Bronzong"; //Substitui o item
 
 console.log(pokemonTeam);
 
-pokemonTeam.pop(); //Remove o último item da lista 
+pokemonTeam.pop(); //Remove o último item da lista
 
 console.log(pokemonTeam);
 
@@ -87,7 +73,14 @@ pokemonTeam.splice(0, 2);
 
 console.log(pokemonTeam);
 
-const firtsGenPokemonTeam = new Array("Raticate", "Slowbro", "Flareon", "Muk", "Jolteon", "Machamp");
+const firtsGenPokemonTeam = new Array(
+  "Raticate",
+  "Slowbro",
+  "Flareon",
+  "Muk",
+  "Jolteon",
+  "Machamp"
+);
 
 console.log(firtsGenPokemonTeam.sort()); //Organiza os itens em ordem alfabética
 console.log(firtsGenPokemonTeam.reverse()); //Organiza os itens em ordem reversa alfabética
@@ -96,16 +89,43 @@ console.log(firtsGenPokemonTeam.reverse()); //Organiza os itens em ordem reversa
 
 const randomNumb = new Array(1, 50, 34, 95, 36, 73, 100, 169, 250);
 
-let cres = randomNumb.sort(function (a, b) { return a - b }); //Ordem Crescente
+let cres = randomNumb.sort(function (a, b) {
+  return a - b;
+}); //Ordem Crescente
 
 console.log(cres);
 
-let des = randomNumb.sort(function (a, b) { return b - a }); //Ordem Decrescente 
+let des = randomNumb.sort(function (a, b) {
+  return b - a;
+}); //Ordem Decrescente
 
 console.log(des);
 
+//FILTER(); //Retorna uma nova lista filtrada
 
+const alunos = ["Ana", "Marcos", "Maria", "Mauro"];
 
+const notas = [7, 4.5, 8, 7.5];
 
+const reprovados = alunos.filter((_, index) => {
+  return notas[index] < 7;
+});
 
+console.log(reprovados);
 
+//SPREAD OPERATOR (...)
+
+const listaOriginal = [7, 7, 8, 9];
+
+const listaNova = [...listaOriginal, 10];
+
+console.log(listaOriginal);
+console.log(listaNova);
+
+//SET();
+
+const chamada = ['Ana', 'Clara', 'Maria', 'Maria', 'João', 'João', 'João'];
+
+const chamadaAtualizada = [...new Set(chamada)];
+
+console.log(chamadaAtualizada);
