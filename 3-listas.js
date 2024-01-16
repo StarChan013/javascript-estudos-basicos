@@ -122,7 +122,7 @@ const listaNova = [...listaOriginal, 10];
 console.log(listaOriginal);
 console.log(listaNova);
 
-//SET();
+//SET(); //Não permite elementos duplicados
 
 const chamada = ['Ana', 'Clara', 'Maria', 'Maria', 'João', 'João', 'João'];
 
