@@ -28,6 +28,63 @@ delete objetoPessoa.cpf //deleta uma chave e valor
 
 console.log(objetoPessoa);
 
+//Tipos
 
+const cliente = {
+  nome: 'João',
+  idade: 24,
+  email: 'joão@firma.com',
+  telefone: ['11222223333','11444445555'],
+}
+
+//é possível adicionar uma lista dentro de um objeto
+
+console.log(cliente.telefone[1]);
+
+//é possível adicionar objetos em objetos, chamados de aninhados
+
+cliente.enderecos = [{
+  rua: 'Rua Fulano de Tal',
+  numero: 2,
+  apartamento: true,
+  complemento: 'apartamento 450',
+}];
+
+console.log(cliente.enderecos.rua); //encontra o valor de uma chave dentro de um objeto q está em outro objeto
+
+//lista de objetos
+
+cliente.enderecos.push({
+  rua: 'Rua Ciclano de Tal',
+  numero: 17,
+  apartamento: false,
+  complemento: '',
+})
+
+//console.log(cliente.enderecos);
+
+const listaApenasApartamentos = cliente.enderecos.filter( //filtrando para exibir apenas apartamentos
+  (endereco) => endereco.apartamento === true
+);
+
+console.log(listaApenasApartamentos);
+
+const novoCliente = {
+  nome: 'Maria',
+  idade: 29,
+  email: 'maria@firma.com',
+  telefone: ['11232334545', '11454556767'],
+  saldo: 200.00,
+  efetuaPagamento: function (valor) { //é possíve adicionar funções dentro de objetos
+    if (valor > this.saldo){
+      console.log('Saldo Insuficiente')
+    } else {
+      this.saldo -= valor;
+      console.log(`Pagamento realizado. Novo salvo: ${this.saldo}`);
+    }
+  }
+}
+
+novoCliente.efetuaPagamento(25);
 
 
