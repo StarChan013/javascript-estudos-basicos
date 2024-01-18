@@ -154,31 +154,92 @@ console.log(
 
 evolution("Geodude", "Graveler");
 
-console.log('Continuando sua exploração pela arrepiante Pokémon Tower, você captura um Gastly. Como é possível capturar um fantasma?')
-console.log('No último andar, você encontra um senhor que, feliz por alguém encontrá-lo após se perder, lhe dá a Poké Flute');
-
-itemBag.push('Poké Flute');
-party('Gastly');
-
-console.log('É o fim da sua jornada em Lavender Town. Aqui está seu status atual:')
 console.log(
-    `Seu time: ${seuTime} \nSuas badges: ${badges} \nSeus items: ${itemBag}`
-  );
+  "Continuando sua exploração pela arrepiante Pokémon Tower, você captura um Gastly. Como é possível capturar um fantasma?"
+);
+console.log(
+  "No último andar, você encontra um senhor que, feliz por alguém encontrá-lo após se perder, lhe dá a Poké Flute"
+);
 
-console.log('De volta ao Snorlax dorminhoco, temos o item necessário?');
+itemBag.push("Poké Flute");
+party("Gastly");
 
-itemExist('Poké Flute');
+console.log(
+  "É o fim da sua jornada em Lavender Town. Aqui está seu status atual:"
+);
+console.log(
+  `Seu time: ${seuTime} \nSuas badges: ${badges} \nSeus items: ${itemBag}`
+);
 
-console.log('Você usa o item e o Snorlax acorda irritado e te ataca! Após batalhar, você consegue capturar o Snorlax!');
+console.log("De volta ao Snorlax dorminhoco, temos o item necessário?");
 
-party('Snorlax');
+itemExist("Poké Flute");
 
-console.log('Em Celadon, você enfrenta a doce Erika, especialista em tipo Planta. Ao ganhar ela te entrega a Rainbow Badge e um novo companheiro para sua equipe: Um Eevee');
+console.log(
+  "Você usa o item e o Snorlax acorda irritado e te ataca! Após batalhar, você consegue capturar o Snorlax!"
+);
 
-party('Eevee');
-badges.push('Rainbow Badge');
+party("Snorlax");
+
+console.log(
+  "Em Celadon, você enfrenta a doce Erika, especialista em tipo Planta. Ao ganhar ela te entrega a Rainbow Badge e um novo companheiro para sua equipe: Um Eevee"
+);
+
+party("Eevee");
+badges.push("Rainbow Badge");
 
 console.log("Você salva o jogo. Veja seus status");
 console.log(
   `Seu time: ${seuTime} \nSuas badges: ${badges} \nSeus items: ${itemBag}`
 );
+
+console.log(
+  "Um novo dia começa!\nApós uma pesquisa, você descobre que seu Eevee pode ser evoluído com a Water Stone que você possui"
+);
+
+function evolutionByStone(pokemon, item, evolution) {
+  if (itemBag.includes(item)) {
+    let index = itemBag.indexOf(item);
+    itemBag.splice(index, 1);
+    let indexPokemon = seuTime.indexOf(pokemon);
+    seuTime[indexPokemon] = evolution;
+    seuTime.splice(indexPokemon, 0);
+
+    console.log(`Parabéns! Seu ${pokemon} evoluiu para ${evolution}`);
+  } else {
+    console.log("Pena, você não tem o item :(");
+  }
+}
+
+evolutionByStone("Eevee", "Water Stone", "Vaporeon");
+console.log(
+  `Seu time: ${seuTime} \nSuas badges: ${badges} \nSeus items: ${itemBag}`
+);
+
+console.log("Após 4 insignias, você sabe que seu desafio vai ser maior. Por isso, você resolve treinar.");
+
+evolution('Ivysaur', 'Venusaur');
+evolution('Pidgeotto', 'Pidgeot');
+evolution('Graveler','Golem');
+evolution('Gastly', 'Haunter');
+
+console.log(`Seu time está incrível, veja: ${seuTime}`);
+
+console.log('Com um time forte desses, você engata uma série de vitórias e notas insignias');
+
+badges.push('Soul Badge','Marsh Badge','Volcano Badge');
+
+console.log('Para seu último ginásio, você evolui seu último membro: Haunter');
+
+evolution('Haunter','Gengar');
+
+console.log('Sua última batalha é cansativa, mas você vence, recebendo a última insígnia: a Earth Badge');
+
+badges.push('Earth Badge');
+
+console.log('PARABÉNS! VOCÊ COLETOU TODAS AS INSÍGNIAS! Veja como ficou seus status final:');
+
+console.log(
+  `Seu time: ${seuTime} \nSuas badges: ${badges} \nSeus items: ${itemBag}`
+);
+
