@@ -90,3 +90,32 @@ const novoCliente = {
 };
 
 novoCliente.efetuaPagamento(25);
+
+//Iterações em objetos
+
+for (let chave in cliente){
+  let tipo = typeof cliente[chave];
+  if (tipo !== 'object' && tipo !== 'function'){
+    console.log(`A chave ${chave} tem o valor ${cliente[chave]}`);
+  }
+};
+
+const chavesDoObjeto = Object.keys(cliente);  //mostra as chaves dos objetos
+
+if (!chavesDoObjeto.includes("enderecos")){
+  console.error('Erro. É necessário ter um endereço cadastrado')
+};
+
+function ligaParaCliente(telefoneComercial, telefoneResidencial){
+  console.log(`Ligando para ${telefoneComercial}`);
+  console.log(`Ligando para ${telefoneResidencial}`);
+};
+
+ligaParaCliente(...cliente.telefone);
+
+const encomenda = {
+  destinatario: cliente.nome,
+  ...cliente.enderecos[0],
+}
+
+console.log(encomenda);

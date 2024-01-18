@@ -164,3 +164,11 @@ const TaylorSwift = {
     "Mastermind",
   ],
 };
+
+for (let album in TaylorSwift) {
+  console.log(`Álbum: ${album}`);
+  for (let i = 0; i < TaylorSwift[album].length; i++) {
+    console.log(`Música ${i + 1}: ${TaylorSwift[album][i]}`);
+  }
+  console.log();
+}
